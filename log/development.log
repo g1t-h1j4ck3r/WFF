@@ -1,0 +1,1661 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 22:10:14 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/railties-4.2.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 30ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (101.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (50.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateOrders (20141119211338)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (94.1ms)[0m  [1mCREATE TABLE "orders" ("id" serial primary key, "orderID" integer, "product" character varying, "amount" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119211338"]]
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.5ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.8ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 22:14:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/railties-4.2.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 29ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:14:15 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.8ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (5.6ms)
+Warning. Error encountered while saving cache 565a94558ade53bff3f4953f5335158088d257a6/orders.css.scssc: can't dump anonymous class #<Class:0xb94ec708>
+
+Warning. Error encountered while saving cache 565a94558ade53bff3f4953f5335158088d257a6/scaffolds.css.scssc: can't dump anonymous class #<Class:0xb94ec708>
+
+Completed 200 OK in 918ms (Views: 912.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/assets/application-31c0dfc3ed324b1e96004541c4c70537.js?body=1" for 127.0.0.1 at 2014-11-19 22:14:16 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:14:20 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (99.8ms)
+  Rendered orders/new.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 191ms (Views: 179.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 22:16:49 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/railties-4.2.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:16:54 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (5.9ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 89ms (Views: 82.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:17:23 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:19:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 203ms (Views: 182.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:20:39 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (20.6ms)
+  Rendered orders/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 114ms (Views: 104.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (2.3ms)
+  Rendered orders/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 78ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:23 +0100
+
+
+Started GET "/assets/application-31c0dfc3ed324b1e96004541c4c70537.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:24 +0100
+
+
+Started GET "/orders/" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+
+
+Started GET "/assets/application-31c0dfc3ed324b1e96004541c4c70537.js?body=1" for 127.0.0.1 at 2014-11-19 22:22:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20141119212439)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (126.8ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "productID" integer, "productName" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141119212439"]]
+  [1m[36m (13.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (6.8ms)
+Warning. Error encountered while saving cache 565a94558ade53bff3f4953f5335158088d257a6/products.css.scssc: can't dump anonymous class #<Class:0xb9235dc0>
+
+Completed 200 OK in 386ms (Views: 381.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/products-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/products-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+
+
+Started GET "/assets/application-4553af0871b2c76ce829fbc5e624610e.js?body=1" for 127.0.0.1 at 2014-11-19 22:25:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.7ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-11-19 22:29:15 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (3.5ms)
+  Rendered products/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 118ms (Views: 100.7ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9UXsz95es3KI/9768VoHvhwN800xcxylStiMvnNYBhqIpo1rmkhU8JZ10takyNSHjnkXw4frjTowAG3sJ8RZAA==", "product"=>{"productID"=>"0", "productName"=>"Cola"}, "commit"=>"Create Product"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "products" ("created_at", "productID", "productName", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-11-19 21:29:22.301821"], ["productID", 0], ["productName", "Cola"], ["updated_at", "2014-11-19 21:29:22.301821"]]
+  [1m[35m (43.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 55ms (ActiveRecord: 44.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 136ms (Views: 127.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:22 +0100
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2014-11-19 22:29:26 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_form.html.erb (2.4ms)
+  Rendered products/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c2ndxkyrNcLS1l+GmhsIi/0LZbAQrEsv6+chRLBni0wOirxiCL3SQMxcU6rPiduyb3+BPqY02rCRP8AW5PvUVg==", "product"=>{"productID"=>"1", "productName"=>"Budweiser"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "productID" = $1, "productName" = $2, "updated_at" = $3 WHERE "products"."id" = 1[0m  [["productID", 1], ["productName", "Budweiser"], ["updated_at", "2014-11-19 21:29:35.412460"]]
+  [1m[35m (35.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 45ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:35 +0100
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (5.9ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 130ms (Views: 123.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:39 +0100
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-11-19 22:29:43 +0100
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (2.1ms)
+  Rendered products/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CzW5FLoUs+w4md5/qXTzUO4r9YkqNQQNPT69mDF4Uyd21tiw/gJUbiYT0lP85iBpfF8RB5ytlZJH5lzKZeQMPQ==", "product"=>{"productID"=>"0", "productName"=>"Cola"}, "commit"=>"Create Product"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("created_at", "productID", "productName", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-11-19 21:29:48.457895"], ["productID", 0], ["productName", "Cola"], ["updated_at", "2014-11-19 21:29:48.457895"]]
+  [1m[36m (105.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 113ms (ActiveRecord: 106.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 95ms (Views: 93.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:48 +0100
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2014-11-19 22:29:53 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (1.9ms)
+  Rendered products/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 115ms (Views: 112.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:29:56 +0100
+
+
+Started GET "/products/0" for 127.0.0.1 at 2014-11-19 22:30:01 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=0):
+  app/controllers/products_controller.rb:67:in `set_product'
+
+
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (11.2ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (40.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:03 +0100
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 125ms (Views: 118.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:10 +0100
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 109ms (Views: 107.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:15 +0100
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2014-11-19 22:30:16 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (3.8ms)
+  Rendered products/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-11-19 22:30:19 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 119ms (Views: 116.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2014-11-19 22:30:21 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (2.2ms)
+  Rendered products/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 113ms (Views: 110.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7KfTjohgRUfsiQZUilxg6sGqZWx5V/dj5OQi+8NL/nyRRLIqzHaixfIDCnjfzrPTU96B4s/PZvyePMOpl9ehZg==", "product"=>{"productID"=>"2", "productName"=>"Cola"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "products" SET "productID" = $1, "updated_at" = $2 WHERE "products"."id" = 2  [["productID", 2], ["updated_at", "2014-11-19 21:30:25.167028"]]
+  [1m[36m (76.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 85ms (ActiveRecord: 77.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:25 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-11-19 22:30:28 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 121ms (Views: 113.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:39 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:30:42 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (4.1ms)
+  Rendered orders/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 124ms (Views: 116.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:30:52 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QprFyz4PVj9Fa2IuATyX7G2jMJuXa+lHJ0yjMXbMZ9A/eaRvehmxvVvhbgJUrkTV/9fUFSHzeNhdlEJjIlA4yg==", "order"=>{"orderID"=>"", "product"=>"Cola1", "amount"=>"1"}, "commit"=>"Create Order"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "orders" ("amount", "created_at", "product", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["amount", 1], ["created_at", "2014-11-19 21:30:52.864684"], ["product", "Cola1"], ["updated_at", "2014-11-19 21:30:52.864684"]]
+  [1m[36m (107.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/1
+Completed 302 Found in 115ms (ActiveRecord: 107.9ms)
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2014-11-19 22:30:52 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOrder Load (0.8ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered orders/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 116ms (Views: 112.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:30:53 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:35:20 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 105ms (Views: 103.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/orders/1" for 127.0.0.1 at 2014-11-19 22:35:30 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e1XSrOr/WAZLqt7x/rTdqMAJhn7/hPguI7HRWUNu6ToGtrMIrum/hFUg0t2rJg6RUn1i8EkcabFZaTALF/K2IA==", "id"=>"1"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 1]]
+  [1m[36m (34.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 40ms (ActiveRecord: 35.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:35:30 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 105ms (Views: 103.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:35:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.6ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.8ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (5.3ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:36:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (1.2ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 241ms (Views: 215.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:36:42 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:36:43 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (20.8ms)
+  Rendered orders/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 133ms (Views: 122.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:36:49 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:36:51 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.8ms)
+  Rendered orders/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 144ms (Views: 142.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:36:58 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVPm4BmcY7iUgWpRUVKpWj/vgcqBThZf4/7ntzsFSpwUsIdEXYqEOooLZn0EwHpjrZtlRDfWh8CZJgblb5kVhg==", "order"=>{"orderID"=>"", "product"=>"Cola1", "amount"=>"1"}, "commit"=>"Create Order"}
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `each' for "Cola1":String):
+  app/controllers/orders_controller.rb:27:in `create'
+
+
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (13.5ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (44.1ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:37:03 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVPm4BmcY7iUgWpRUVKpWj/vgcqBThZf4/7ntzsFSpwUsIdEXYqEOooLZn0EwHpjrZtlRDfWh8CZJgblb5kVhg==", "order"=>{"orderID"=>"", "product"=>"Cola", "amount"=>"1"}, "commit"=>"Create Order"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `each' for "Cola":String):
+  app/controllers/orders_controller.rb:27:in `create'
+
+
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (15.2ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (49.5ms)
+
+
+Started GET "/product" for 127.0.0.1 at 2014-11-19 22:37:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/product"):
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta1) lib/action_dispatch/middleware/static.rb:83:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta1) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta1) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ich/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ich/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ich/.rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (30.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 115ms (Views: 110.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:37:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.4ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.5ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:38:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (20.8ms)
+  Rendered orders/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 273ms (Views: 236.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:53 +0100
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BZpaucISLRtXUBJbg04j8ch1OQskAbnMeYRtL1Lzz5l4eTsdhgTKmUnaHnfW3PDIWgHdhZKZKFMDXIx9Bm+Qgw==", "order"=>{"orderID"=>"", "product"=>"Cola1", "amount"=>"1"}, "commit"=>"Create Order"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "orders" ("amount", "created_at", "product", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 1], ["created_at", "2014-11-19 21:38:59.263599"], ["product", "Cola1"], ["updated_at", "2014-11-19 21:38:59.263599"]]
+  [1m[35m (69.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders/2
+Completed 302 Found in 79ms (ActiveRecord: 70.0ms)
+
+
+Started GET "/orders/2" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered orders/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 108ms (Views: 96.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:38:59 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:39:01 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.5ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  SELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (9.4ms)[0m  [1mSELECT t2.relname AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schema_migrations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 190ms (Views: 177.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:40:09 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:40:16 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.9ms)
+  Rendered orders/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 103ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:40:25 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdJLLKoaxcb+X1IN1xju/Ia8CWuRaWymnNA3GTtzJ8TYMSqI7gwiRODVXiGCij3FFMjt5Sfx/TnmCNZLb+943g==", "order"=>{"orderID"=>"", "product"=>"Cola1", "amount"=>"1"}, "commit"=>"Create Order"}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `each' for "Cola1":String):
+  app/controllers/orders_controller.rb:27:in `create'
+
+
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (11.7ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/ich/.gem/ruby/2.1.3/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (39.9ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:42:13 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdJLLKoaxcb+X1IN1xju/Ia8CWuRaWymnNA3GTtzJ8TYMSqI7gwiRODVXiGCij3FFMjt5Sfx/TnmCNZLb+943g==", "order"=>{"orderID"=>"", "product"=>"1", "amount"=>"1"}, "commit"=>"Create Order"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "orders" ("amount", "created_at", "product", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 1], ["created_at", "2014-11-19 21:42:13.752013"], ["product", "1"], ["updated_at", "2014-11-19 21:42:13.752013"]]
+  [1m[35m (35.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders/3
+Completed 302 Found in 58ms (ActiveRecord: 39.5ms)
+
+
+Started GET "/orders/3" for 127.0.0.1 at 2014-11-19 22:42:13 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 141ms (Views: 137.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:14 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:16 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/orders/2" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2/tybVHgDO4yl/gdYnAfmnGhFmEuUJ4R+NWmAjCiSWSmGBPJFfbrbCwd9DE34syj49Xy75jID46CDUdQZD4Wfg==", "id"=>"2"}
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."id" = $1[0m  [["id", 2]]
+  [1m[35m (18.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 24ms (ActiveRecord: 19.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:21 +0100
+
+
+Started DELETE "/orders/3" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7ohPEo3jjbkl7RrAAAD3WmBvLKRpdLIx4MvlhXXAmtSTay62yfVqOztnFuxVkiRj8hvIKt/sI66aEwTXIVzFzg==", "id"=>"3"}
+  [1m[35mOrder Load (0.6ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 3]]
+  [1m[36m (39.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 45ms (ActiveRecord: 40.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:24 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:42:26 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.0ms)
+  Rendered orders/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 122ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kokJO5Se7npH5Y1SwAu/osk08Wq8/Xp10W3YEak2wNvvamif0IgJ+FlvgX6VmWybW0AV5Apl6+qrtTlD/aqfwQ==", "order"=>{"orderID"=>"", "product"=>"Cola", "amount"=>"1"}, "commit"=>"Create Order"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "orders" ("amount", "created_at", "product", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["amount", 1], ["created_at", "2014-11-19 21:42:32.446494"], ["product", "Cola"], ["updated_at", "2014-11-19 21:42:32.446494"]]
+  [1m[36m (42.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/4
+Completed 302 Found in 53ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/orders/4" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mOrder Load (0.5ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered orders/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 104ms (Views: 100.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:32 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:34 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:42:38 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.3ms)
+  Rendered orders/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5iF9FNPRR+eqDdSszS38vTn4TEWRgccaJM2aQaxnXBObwhywl8egZbSH2ICYvy+Eq4yoyycZVoVeFXsT+PsDCQ==", "order"=>{"orderID"=>"", "product"=>"Budweiser1", "amount"=>"1"}, "commit"=>"Create Order"}
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("amount", "created_at", "product", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 1], ["created_at", "2014-11-19 21:42:45.306805"], ["product", "Budweiser1"], ["updated_at", "2014-11-19 21:42:45.306805"]]
+  [1m[35m (37.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders/5
+Completed 302 Found in 46ms (ActiveRecord: 39.4ms)
+
+
+Started GET "/orders/5" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:45 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:48 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 117ms (Views: 114.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/orders/4" for 127.0.0.1 at 2014-11-19 22:42:52 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k8Mc0YeSODwh4EeoI7zaRCG1W4uNVZJ+VbOThwNkIGTuIH11w4Tfvj9qS4R2Lgl9s8G/BTvNA+Eva3LVV/h/fg==", "id"=>"4"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."id" = $1[0m  [["id", 4]]
+  [1m[35m (35.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 41ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:52 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 119ms (Views: 117.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:53 +0100
+
+
+Started DELETE "/orders/5" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Vg0UE2X1/AFlHX4dHjCFL89dLzH4G0W7XYvfWaJu8c0r7nW3IeMbg3uXcjFLolYWXSnLv06D1CQnUz4L9vKu1w==", "id"=>"5"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 5]]
+  [1m[36m (39.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 44ms (ActiveRecord: 40.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 115ms (Views: 113.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:42:56 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:43:03 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (2.9ms)
+  Rendered orders/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:43:08 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:43:10 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (2.7ms)
+  Rendered orders/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:43:12 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/products-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/products-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/assets/application-4553af0871b2c76ce829fbc5e624610e.js?body=1" for 127.0.0.1 at 2014-11-19 22:44:20 +0100
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:44:23 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (2.9ms)
+  Rendered orders/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+Processing by OrdersController#new as HTML
+  Rendered orders/_form.html.erb (3.2ms)
+  Rendered orders/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 123ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/orders-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/products-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/scaffolds-9165735d99af16577989ff92dca7d185.css?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/application-54746d91370432f4721dbb35a50267b8.css?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/orders-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/products-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/assets/application-4553af0871b2c76ce829fbc5e624610e.js?body=1" for 127.0.0.1 at 2014-11-19 22:45:10 +0100
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-11-19 22:45:13 +0100
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.9ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 131ms (Views: 128.9ms | ActiveRecord: 0.9ms)
